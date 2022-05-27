@@ -1,3 +1,19 @@
 .container {
   padding: 0 2rem;
+  text-align: center;
+  color: white;
+  background-color: var(--blue-background);
+  height: calc(100vh - 118px);
+}
+
+.heading {
+  margin-top: 0;
+}
+
+.view {
+  background-color: var(--blue-medium);
+  border-radius: 20px;
+  width: max-content;
+  padding: 0.5rem 1rem;
+  font-weight: 600;
 }

@@ -1,6 +1,6 @@
 import Head from "next/head";
-import Image from "next/image";
 import styles from "../styles/Home.module.css";
+import Link from "next/link";
 
 export default function Home() {
   return (
@@ -12,13 +12,11 @@ export default function Home() {
       </Head>
       <div className={styles.container}>
         <header>
-          <nav>
-            <div>{/* <Image src="./a" /> */}</div>
-            <div></div>
-          </nav>
+          <h1 className={styles.heading}>Welcome To Metricks</h1>
+          <Link href="/comingsoon">
+            <a className={styles.view}>View Our Latest Product</a>
+          </Link>
         </header>
-        <main></main>
-        <footer></footer>
       </div>
     </>
   );
