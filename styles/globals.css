@@ -1,3 +1,9 @@
+:root {
+  --blue-background: #1e0040;
+  --blue-medium: #271ac1;
+  --white: #ffffff;
+}
+
 html,
 body {
   padding: 0;
