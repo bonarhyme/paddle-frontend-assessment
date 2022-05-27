@@ -1,0 +1,27 @@
+.footer {
+  padding-top: 3rem;
+  padding-bottom: 1rem;
+  text-align: center;
+  color: var(--gray-dark);
+}
+
+.iconContainer,
+.meta {
+  display: flex;
+  justify-content: center;
+  gap: 2rem;
+}
+
+.icon {
+  background-color: var(--blue-background);
+  opacity: 0.8;
+}
+.icon:hover,
+.icon:active {
+  opacity: 1;
+  transform: scale(1.2);
+}
+
+.meta {
+  padding-top: 0.5rem;
+}

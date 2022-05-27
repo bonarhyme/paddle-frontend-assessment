@@ -2,9 +2,9 @@ import React, { useState } from "react";
 import Image from "next/image";
 import transparentLogo from "../public/assets/transparent_metrics_logo.png";
 import Link from "next/link";
+import { FaBars } from "react-icons/fa";
 
 import styles from "../styles/Layout.module.css";
-import { FaBars } from "react-icons/fa";
 
 const Layout = ({ children }) => {
   const [show, setShow] = useState(false);

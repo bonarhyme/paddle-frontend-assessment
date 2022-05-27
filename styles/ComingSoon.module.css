@@ -1,20 +1,32 @@
 .body {
-  background-color: var(--blue-background);
   color: var(--white);
   min-height: var(--main-height);
+  background-color: var(--blue-background);
+  background-image: url("../public/assets/coming_soon_background.png");
+  background-repeat: no-repeat;
+  background-position: center;
+  background-size: cover;
+  background-color: red;
 }
 .container {
   text-align: center;
-  width: 100%;
-  max-width: 550px;
   margin: auto;
   margin-top: -2rem;
   padding-top: 1rem;
   padding: 1rem;
+  margin-bottom: 5rem;
 }
 
 .heading {
   text-transform: uppercase;
+  font-size: 3rem;
+}
+
+.paragraph {
+  width: 100%;
+  max-width: 550px;
+  margin: auto;
+  padding-bottom: 2rem;
 }
 
 .cardsContainer {
@@ -33,7 +45,7 @@
   align-items: center;
   justify-content: center;
   height: 100px;
-  width: 80px;
+  width: 90px;
   padding: 1rem;
   border-radius: 5px;
 }
@@ -79,6 +91,9 @@
   background-color: var(--blue-medium);
   color: var(--white);
   margin-left: -4rem;
+  box-shadow: 0 0 5px var(--blue-medium);
+  border: none;
+  cursor: pointer;
 }
 
 @media (min-width: 769px) {

@@ -1,4 +1,5 @@
 import React from "react";
+import Footer from "../components/Footer";
 
 import styles from "../styles/ComingSoon.module.css";
 
@@ -9,7 +10,7 @@ const ComingSoon = () => {
         <h1 className={styles.heading}>
           Something awesome is <br /> coming soon
         </h1>
-        <p>
+        <p className={styles.paragraph}>
           Your all-in-one affiliate marketing tracking software <b>track</b>,{" "}
           <b>automate</b>, and <b>optimize</b> your campaigns
         </p>
@@ -45,6 +46,7 @@ const ComingSoon = () => {
           </form>
         </div>
       </main>
+      <Footer backgroundColor={false} />
     </div>
   );
 };
