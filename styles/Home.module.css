@@ -3,7 +3,7 @@
   text-align: center;
   color: white;
   background-color: var(--blue-background);
-  height: calc(100vh - 118px);
+  height: var(--main-height);
 }
 
 .heading {

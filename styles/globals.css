@@ -2,6 +2,10 @@
   --blue-background: #1e0040;
   --blue-medium: #271ac1;
   --white: #ffffff;
+  --black: #000000;
+  --gray-light: #3a2c51;
+  --gray-medium: #7d6e94;
+  --main-height: calc(100vh - 118px);
 }
 
 html,
