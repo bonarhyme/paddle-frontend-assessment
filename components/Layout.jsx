@@ -38,15 +38,18 @@ const Layout = ({ children }) => {
             }`}
           >
             <Link href="/about" passHref>
-              <a>About us</a>
+              <a onClick={() => setShow(false)}>About us</a>
             </Link>
             <Link href="/blog" passHref>
-              <a>Blog</a>
+              <a onClick={() => setShow(false)}>Blog</a>
             </Link>
             <Link href="#contact" passHref>
               <a
                 className={styles.contactUsAnchor}
-                onClick={() => setShowContactUs((prev) => !prev)}
+                onClick={() => {
+                  setShow(false);
+                  setShowContactUs((prev) => !prev);
+                }}
               >
                 Contact us
               </a>
