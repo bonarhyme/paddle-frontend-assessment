@@ -6,6 +6,18 @@
   --gray-light: #3a2c51;
   --gray-medium: #7d6e94;
   --gray-dark: #9792a2;
+  --half-transparent-bg-left: linear-gradient(
+    90deg,
+    rgba(114, 113, 113, 0.192) 50%,
+    transparent 50%
+  );
+  --half-transparent-bg-right: linear-gradient(
+    90deg,
+    transparent 50%,
+    rgba(114, 113, 113, 0.192) 50%
+  );
+  --transparent-bg: rgba(114, 113, 113, 0.192);
+  --purple-primary: #ff00f7;
   --main-height: calc(100vh - 118px);
 }
 
