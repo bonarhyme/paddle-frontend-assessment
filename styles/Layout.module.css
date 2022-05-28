@@ -67,3 +67,16 @@
     transform: rotate(90deg);
   }
 }
+
+.relative {
+  position: relative;
+}
+
+.absolute {
+  position: absolute;
+  width: 100%;
+  top: 0;
+  bottom: 0;
+  min-height: var(--main-height);
+  z-index: 999;
+}

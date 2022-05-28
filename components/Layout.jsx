@@ -5,44 +5,61 @@ import Link from "next/link";
 import { FaBars } from "react-icons/fa";
 
 import styles from "../styles/Layout.module.css";
+import Contact from "./Contact";
 
 const Layout = ({ children }) => {
   const [show, setShow] = useState(false);
+  const [showContactUs, setShowContactUs] = useState(false);
 
   return (
     <>
-      <nav className={styles.container}>
-        <Link href="/" passHref>
-          <a className={styles.logoContainer}>
-            <Image
-              src={transparentLogo}
-              alt="metricks logo"
-              width={100}
-              height={50}
+      <div className={styles.relative}>
+        <nav className={styles.container}>
+          <Link href="/" passHref>
+            <a className={styles.logoContainer}>
+              <Image
+                src={transparentLogo}
+                alt="metricks logo"
+                width={100}
+                height={50}
+              />
+            </a>
+          </Link>
+          <div className={`${styles.bar} ${show ? styles.active : ""}`}>
+            <FaBars
+              size={35}
+              color="white"
+              onClick={() => setShow((prev) => !prev)}
             />
-          </a>
-        </Link>
-        <div className={`${styles.bar} ${show ? styles.active : ""}`}>
-          <FaBars
-            size={35}
-            color="white"
-            onClick={() => setShow((prev) => !prev)}
-          />
-        </div>
-        <div
-          className={`${styles.linksContainer} ${show ? "" : styles.toggleBar}`}
-        >
-          <Link href="/about" passHref>
-            <a>About us</a>
-          </Link>
-          <Link href="/blog" passHref>
-            <a>Blog</a>
-          </Link>
-          <Link href="#contact" passHref>
-            <a className={styles.contactUsAnchor}>Contact us</a>
-          </Link>
-        </div>
-      </nav>
+          </div>
+          <div
+            className={`${styles.linksContainer} ${
+              show ? "" : styles.toggleBar
+            }`}
+          >
+            <Link href="/about" passHref>
+              <a>About us</a>
+            </Link>
+            <Link href="/blog" passHref>
+              <a>Blog</a>
+            </Link>
+            <Link href="#contact" passHref>
+              <a
+                className={styles.contactUsAnchor}
+                onClick={() => setShowContactUs((prev) => !prev)}
+              >
+                Contact us
+              </a>
+            </Link>
+          </div>
+        </nav>
+        {showContactUs && (
+          <div className={styles.absolute}>
+            {" "}
+            <Contact setShowContactUs={setShowContactUs} />
+          </div>
+        )}
+      </div>
       {children}
     </>
   );
