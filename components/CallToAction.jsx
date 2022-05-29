@@ -11,7 +11,11 @@ const CallToAction = ({
   return (
     <section
       className={styles.sectionFour}
-      style={{ backgroundColor: backgroundColor ? "#1f3569" : "initial" }}
+      style={{
+        backgroundColor: backgroundColor
+          ? "#1f3569"
+          : "rgba(114, 113, 113, 0.192)",
+      }}
     >
       <div>
         <h2 className={styles.sectionFourH2}>{title}</h2>

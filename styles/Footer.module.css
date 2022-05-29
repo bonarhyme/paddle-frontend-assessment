@@ -3,10 +3,10 @@
   padding-bottom: 1rem;
   text-align: center;
   color: var(--gray-dark);
-  background-color: var(--blue-background);
+  background-color: transparent;
 }
 
-.footer.footer.blog {
+.footer.blog {
   background-color: var(--white);
 }
 

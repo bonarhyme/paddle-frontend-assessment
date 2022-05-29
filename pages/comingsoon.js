@@ -46,7 +46,7 @@ const ComingSoon = () => {
           </form>
         </div>
       </main>
-      <Footer backgroundColor={false} />
+      <Footer backgroundColor />
     </div>
   );
 };

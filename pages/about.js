@@ -5,28 +5,28 @@ import CallToAction from "../components/CallToAction";
 
 const About = () => {
   return (
-    <>
-      <main className={styles.container}>
-        <section className={styles.sectionOne}>
-          <div className={styles.headingContainer}>
-            <span className={styles.line}></span>
-            <h1 className={styles.heading}>About us</h1>
-          </div>
-          <div className={styles.mainParagraph}>
-            <p>
-              Built for SaaS <br /> and E-commerce
-            </p>
-          </div>
-          <div className={styles.rightAlignedParagraph}>
-            <p>
-              Our tools are easy to set up and use with a user{" "}
-              <br className={styles.hideBrSM} /> friendly dashboard that enables
-              you to set-up, <br className={styles.hideBrSM} /> launch, automate
-              and manage multi-affiliate <br className={styles.hideBrSM} />{" "}
-              campaigns in 5 minutes.
-            </p>
-          </div>
-        </section>
+    <div className={styles.container}>
+      <header className={styles.sectionOne}>
+        <div className={styles.headingContainer}>
+          <span className={styles.line}></span>
+          <h1 className={styles.heading}>About us</h1>
+        </div>
+        <div className={styles.mainParagraph}>
+          <p>
+            Built for SaaS <br /> and E-commerce
+          </p>
+        </div>
+        <div className={styles.rightAlignedParagraph}>
+          <p>
+            Our tools are easy to set up and use with a user{" "}
+            <br className={styles.hideBrSM} /> friendly dashboard that enables
+            you to set-up, <br className={styles.hideBrSM} /> launch, automate
+            and manage multi-affiliate <br className={styles.hideBrSM} />{" "}
+            campaigns in 5 minutes.
+          </p>
+        </div>
+      </header>
+      <main>
         <section className={styles.sectionTwo}>
           <div className={styles.sectionTwoFirstDiv}>
             <p className={styles.sectionTwoFirstP}>
@@ -91,7 +91,7 @@ const About = () => {
         <CallToAction />
       </main>
       <Footer />
-    </>
+    </div>
   );
 };
 
