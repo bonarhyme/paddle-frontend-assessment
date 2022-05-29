@@ -13,8 +13,7 @@ import Link from "next/link";
 const Footer = ({ backgroundColor = true }) => {
   return (
     <footer
-      className={styles.footer}
-      style={{ backgroundColor: `${backgroundColor ? "#1e0040" : ""}` }}
+      className={`${styles.footer} ${!backgroundColor ? styles.blog : ""}`}
     >
       <div className={styles.iconContainer}>
         <a
@@ -25,7 +24,7 @@ const Footer = ({ backgroundColor = true }) => {
           <FaYoutube
             size={25}
             className={styles.icon}
-            color="white"
+            color={!backgroundColor ? "#1e0040" : "white"}
             target="_blank"
           />
         </a>
@@ -37,7 +36,7 @@ const Footer = ({ backgroundColor = true }) => {
           <FaFacebook
             size={25}
             className={styles.icon}
-            color="white"
+            color={!backgroundColor ? "#1e0040" : "white"}
             target="_blank"
           />
         </a>
@@ -49,7 +48,7 @@ const Footer = ({ backgroundColor = true }) => {
           <FaLinkedin
             size={25}
             className={styles.icon}
-            color="white"
+            color={!backgroundColor ? "#1e0040" : "white"}
             target="_blank"
           />
         </a>
@@ -61,7 +60,7 @@ const Footer = ({ backgroundColor = true }) => {
           <FaInstagram
             size={25}
             className={styles.icon}
-            color="white"
+            color={!backgroundColor ? "#1e0040" : "white"}
             target="_blank"
           />
         </a>
@@ -74,7 +73,7 @@ const Footer = ({ backgroundColor = true }) => {
           <FaTwitter
             size={25}
             className={styles.icon}
-            color="white"
+            color={!backgroundColor ? "#1e0040" : "white"}
             target="_blank"
           />
         </a>

@@ -3,6 +3,11 @@
   padding-bottom: 1rem;
   text-align: center;
   color: var(--gray-dark);
+  background-color: var(--blue-background);
+}
+
+.footer.footer.blog {
+  background-color: var(--white);
 }
 
 .iconContainer,
@@ -10,6 +15,10 @@
   display: flex;
   justify-content: center;
   gap: 2rem;
+}
+
+.footer.blog .icon {
+  background-color: var(--white);
 }
 
 .icon {

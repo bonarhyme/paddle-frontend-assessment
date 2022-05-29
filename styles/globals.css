@@ -1,6 +1,7 @@
 :root {
   --blue-background: #1e0040;
   --blue-medium: #271ac1;
+  --blue-dark: #1f3569;
   --white: #ffffff;
   --black: #000000;
   --gray-light: #3a2c51;
@@ -18,6 +19,7 @@
   );
   --transparent-bg: rgba(114, 113, 113, 0.192);
   --purple-primary: #ff00f7;
+  --purple-secondary: #7c0fd5;
   --main-height: calc(100vh - 118px);
 }
 

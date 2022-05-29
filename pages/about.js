@@ -1,7 +1,7 @@
 import React from "react";
 import styles from "../styles/About.module.css";
-import { BsArrowRight } from "react-icons/bs";
 import Footer from "../components/Footer";
+import CallToAction from "../components/CallToAction";
 
 const About = () => {
   return (
@@ -88,18 +88,7 @@ const About = () => {
             </div>
           </div>
         </section>
-        <section className={styles.sectionFour}>
-          <div>
-            <h2 className={styles.sectionFourH2}>Got a Question?</h2>
-            <p className={styles.sectionFourP}>
-              See how Metricks can help your business grow with best affiliate
-              marketting tracking <br className={styles.hideBrSM} /> software
-            </p>
-            <a className={styles.sectionFourAnchor}>
-              Contact Us <BsArrowRight size={20} />
-            </a>
-          </div>
-        </section>
+        <CallToAction />
       </main>
       <Footer />
     </>

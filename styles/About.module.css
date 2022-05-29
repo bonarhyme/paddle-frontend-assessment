@@ -138,7 +138,7 @@
 
 .sectionFour {
   background-color: var(--transparent-bg);
-  padding: 1rem;
+  padding: 3rem 1rem;
 }
 
 .sectionFourH2 {
@@ -160,7 +160,7 @@
 
 @media (min-width: 769px) {
   .sectionFour {
-    padding: 3rem 5rem;
+    padding: 5rem;
   }
   .sectionFourH2 {
     font-size: 2rem;
