@@ -6,7 +6,7 @@ First, run the development server:
 
 1. Clone or download repo on your machine.
 2. Run `npm install`
-3. Run `npm run dev`
+3. Run `npm run dev` and open `http://localhost:3000` on your browser
 4. Navigate to `/comingsoon` for task One.
 5. Navigate to `/github` for task Two.
 
