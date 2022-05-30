@@ -14,8 +14,14 @@ export default function Home() {
       <div className={styles.container}>
         <header>
           <h1 className={styles.heading}>Welcome To Metricks</h1>
+
           <Link href="/comingsoon">
-            <a className={styles.view}>View Our Latest Product</a>
+            <a className={styles.view}>View Task One</a>
+          </Link>
+          <Link href="/github">
+            <a className={styles.view} style={{ backgroundColor: "#ff00f7" }}>
+              View Task Two
+            </a>
           </Link>
         </header>
       </div>
