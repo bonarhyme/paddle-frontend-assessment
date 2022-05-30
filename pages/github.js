@@ -8,8 +8,11 @@ import {
 } from "react-icons/ti";
 import { FaSearch } from "react-icons/fa";
 import Image from "next/image";
+import * as timeago from "timeago.js";
+
 import styles from "../styles/Github.module.css";
 import imageA from "../data/github/placeholders/imageA.png";
+import { numFormatter } from "../helpers/formatNumbers";
 
 const requestInitialState = {
   loading: false,
@@ -122,11 +125,15 @@ const Github = () => {
                   <div>
                     <h3>{name}</h3>
                     <p>{description}</p>
-                    <div>
-                      <span>Starts: {stargazers_count}</span>
-                      <span>Issues: {open_issues}</span>
-                      <span>
-                        Submitted {pushed_at} by {owner?.login}
+                    <div className={styles.meta}>
+                      <span className={styles.stars}>
+                        Stars: {numFormatter(stargazers_count)}
+                      </span>
+                      <span className={styles.issues}>
+                        Issues: {numFormatter(open_issues)}
+                      </span>
+                      <span className={styles.submitted}>
+                        Submitted {timeago.format(pushed_at)} by {owner?.login}
                       </span>
                     </div>
                   </div>

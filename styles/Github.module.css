@@ -88,3 +88,17 @@
     transform: rotate(360deg);
   }
 }
+
+.stars,
+.issues,
+.submitted {
+  margin-right: 0.5rem;
+  padding: 0.2rem 0.5rem;
+  line-height: 2;
+}
+
+.stars,
+.issues {
+  border: 1px solid var(--black);
+  border-radius: 5px;
+}
