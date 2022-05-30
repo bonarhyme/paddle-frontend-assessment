@@ -116,3 +116,27 @@
   line-clamp: 3;
   -webkit-box-orient: vertical;
 }
+
+.listContainer {
+  overflow-x: auto;
+  padding: 1rem;
+  width: 100%;
+  max-width: 400px;
+  overflow-y: hidden;
+  margin: auto;
+}
+
+.listItem {
+  font-size: 1.2rem;
+  font-weight: 500;
+  background-color: var(--blue-medium);
+  color: var(--white);
+  border: 1px solid var(--white);
+  padding: 0.1rem 0.7rem;
+  margin-right: 0.5rem;
+  cursor: pointer;
+}
+
+.listItem.active {
+  background-color: var(--gray-dark);
+}

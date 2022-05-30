@@ -26,32 +26,30 @@ const mostStaredRepositoryURL = `https://api.github.com/search/repositories?q=cr
 
 const Github = () => {
   const [requestState, setRequestState] = useState(requestInitialState);
-  const [pagination, setPagination] = useState({
-    page: 1,
-    pages: 30,
-  });
+  const [page, setPage] = useState(1);
+  const [pages, setPages] = useState(25);
+
+  const getRepository = async (page) => {
+    setRequestState({
+      loading: true,
+      error: false,
+      success: false,
+      errorMessage: "",
+      list: [],
+    });
+    const { data } = await axios.get(`${mostStaredRepositoryURL} `);
+
+    setRequestState({
+      loading: false,
+      error: false,
+      success: true,
+      errorMessage: "",
+      list: data?.items,
+    });
+  };
 
   useEffect(() => {
     try {
-      const getRepository = async () => {
-        setRequestState({
-          loading: true,
-          error: false,
-          success: false,
-          errorMessage: "",
-          list: [],
-        });
-        const { data } = await axios.get(mostStaredRepositoryURL);
-
-        setRequestState({
-          loading: false,
-          error: false,
-          success: true,
-          errorMessage: "",
-          list: data?.items,
-        });
-        console.log(data.items);
-      };
       getRepository();
     } catch (error) {
       setRequestState({
@@ -63,6 +61,11 @@ const Github = () => {
       });
     }
   }, []);
+
+  const handlePagination = (e) => {
+    setPage(Number(e.target.innerText));
+    getRepository("&page=" + e.target.innerText);
+  };
 
   return (
     <div className={styles.container}>
@@ -142,6 +145,21 @@ const Github = () => {
               );
             })}
         </section>
+        <div className={styles.listContainer}>
+          {[...Array(Number(pages)).keys()].map((x) => {
+            return (
+              <span
+                key={x + 1}
+                onClick={(e) => handlePagination(e)}
+                className={`${styles.listItem} ${
+                  page === x + 1 ? styles.active : ""
+                }`}
+              >
+                {x + 1}
+              </span>
+            );
+          })}
+        </div>
       </main>
     </div>
   );
