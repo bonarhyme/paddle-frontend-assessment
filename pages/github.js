@@ -26,6 +26,10 @@ const mostStaredRepositoryURL = `https://api.github.com/search/repositories?q=cr
 
 const Github = () => {
   const [requestState, setRequestState] = useState(requestInitialState);
+  const [pagination, setPagination] = useState({
+    page: 1,
+    pages: 30,
+  });
 
   useEffect(() => {
     try {
@@ -39,7 +43,6 @@ const Github = () => {
         });
         const { data } = await axios.get(mostStaredRepositoryURL);
 
-        // console.log(data.items);
         setRequestState({
           loading: false,
           error: false,
@@ -80,10 +83,7 @@ const Github = () => {
           </span>
           <form className={styles.form} onSubmit={(e) => e.preventDefault()}>
             <input type="" className={styles.input} />
-            <button
-              type="submit"
-              // className={styles.sectionTwoSecondDivButton}
-            >
+            <button type="submit">
               <FaSearch size={20} />
             </button>
           </form>
@@ -98,7 +98,6 @@ const Github = () => {
           )}
           {requestState.list.length > 0 &&
             requestState.list.map((repo, index) => {
-              console.log(index);
               const {
                 owner,
                 name,
@@ -124,7 +123,9 @@ const Github = () => {
                   </div>
                   <div>
                     <h3>{name}</h3>
-                    <p>{description}</p>
+                    <p className={styles.repositoryDescription}>
+                      {description}
+                    </p>
                     <div className={styles.meta}>
                       <span className={styles.stars}>
                         Stars: {numFormatter(stargazers_count)}

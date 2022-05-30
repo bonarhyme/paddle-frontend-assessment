@@ -89,16 +89,30 @@
   }
 }
 
+.metaContainer {
+  border: 1px solid red;
+}
+
 .stars,
 .issues,
 .submitted {
   margin-right: 0.5rem;
   padding: 0.2rem 0.5rem;
   line-height: 2;
+  display: inline-block;
 }
 
 .stars,
 .issues {
   border: 1px solid var(--black);
   border-radius: 5px;
+}
+
+.repositoryDescription {
+  overflow: hidden;
+  text-overflow: ellipsis;
+  display: -webkit-box;
+  -webkit-line-clamp: 3; /* number of lines to show */
+  line-clamp: 3;
+  -webkit-box-orient: vertical;
 }
